@@ -1,13 +1,13 @@
 version: "3.8"
-  services:
-    mongodb:
-      image : mongo
-      container_name: mongodb
-      environment:
+services:
+  mongodb:
+    image : mongo
+    container_name: mongodb
+    environment:
       - PUID=1000
       - PGID=1000
-      volumes:
+    volumes:
       - ~/data:/data/db
-      ports:
+    ports:
       - 27017:27017
-      restart: unless-stopped
+    restart: unless-stopped
